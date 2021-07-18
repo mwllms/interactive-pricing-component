@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="antialiased">
+    <main
+      class="px-6 w-full h-screen bg-no-repeat"
+      style="background-image: url(./assets/bg-pattern.svg)"
+    >
+      <section
+        class="h-58 flex flex-col justify-center text-center bg-no-repeat bg-center sm:h-66"
+        style="background-image: url(./assets/pattern-circles.svg)"
+      >
+        <h1 class="text-xl font-extrabold text-gray-dark sm:text-2xl">
+          Simple, traffic-based pricing
+        </h1>
+        <p class="mt-2 font-semibold text-sm leading-6 text-gray sm:mt-3 sm:text-base">
+          Sign-up for our 30-day trial. <br class="sm:hidden" />
+          No credit card required.
+        </p>
+      </section>
+      <section class="mx-auto pt-8 bg-white rounded-lg shadow-2xl max-w-larger sm:pt-10">
+        <div
+          class="
+            px-6
+            flex flex-col
+            items-center
+            sm:flex-row sm:flex-wrap sm:justify-between sm:px-12
+          "
+        >
+          <h3
+            class="
+              text-gray
+              uppercase
+              text-xs
+              font-extrabold
+              tracking-widest
+              sm:order-1 sm:text-tiny
+            "
+          >
+            <span data-page-views>100K</span> pageviews
+          </h3>
+          <div class="mt-6 h-10 w-full sm:order-3 sm:flex-shrink-0">
+            <input
+              class="
+                appearance-none
+                mx-auto
+                outline-none
+                p-0
+                w-full
+                h-2
+                bg-gray-lighter bg-no-repeat
+                cursor-pointer
+                rounded-full
+                bg-gradient-to-r
+                from-green-lighter
+                to-green-lighter
+              "
+              type="range"
+              min="0"
+              max="4"
+              step="1"
+              value="2"
+            />
+          </div>
+          <div class="mt-6 inline-flex items-center space-x-2.5 sm:order-2 sm:mt-0">
+            <div class="font-extrabold text-3xl tracking-tighter sm:text-5xl">
+              &dollar;<span data-price>16.00</span>
+            </div>
+            <div class="font-semibold text-tiny text-gray sm:text-base">/ month</div>
+          </div>
+        </div>
+        <div class="mt-8.5 flex items-center">
+          <div class="font-semibold text-xs text-gray flex-1 text-right">Monthly billing</div>
+          <div class="mx-3 flex-shrink-0 flex-grow-0">
+            <label for="billing" class="relative inline-block w-11 h-6">
+              <input id="billing" class="opacity-0 w-0 h-0" type="checkbox" />
+              <span class="check-slider"></span>
+            </label>
+          </div>
+          <div class="font-semibold text-xs text-gray flex-1">
+            Yearly billing
+            <span
+              class="
+                ml-1
+                px-2
+                h-5
+                inline-flex
+                items-center
+                bg-orange-lighter
+                rounded-full
+                font-extrabold
+                text-xxs text-orange
+              "
+            >
+              <span class="sm:hidden">-25%</span>
+              <span class="hidden sm:inline-block">25% discount</span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="
+            mt-9
+            px-6
+            pt-6
+            pb-8
+            border-t border-gray-lighter
+            sm:flex sm:items-center sm:justify-between sm:px-12 sm:mt-11 sm:pt-8
+          "
+        >
+          <ul class="ml-4 text-center space-y-2.5 sm:text-left">
+            <li class="relative text-gray font-semibold text-xs">Unlimited websites</li>
+            <li class="relative text-gray font-semibold text-xs">100% data ownership</li>
+            <li class="relative text-gray font-semibold text-xs">Email reports</li>
+          </ul>
+          <div class="mt-8 w-full text-center sm:w-auto sm:text-right sm:mt-0">
+            <button
+              class="
+                h-10
+                inline-flex
+                items-center
+                justify-center
+                rounded-full
+                w-43
+                bg-gray-dark
+                text-gray-light
+                font-extrabold
+                text-xs
+                transition-colors
+                hover:text-white
+              "
+            >
+              Start my trial
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
